@@ -15,7 +15,7 @@
     ],
     "assets": {
       "host01": [
-        {"file": "pod.yaml", "target": "~", "chmod": "+w"}
+        {"file": "pod.yaml", "target": "/root", "chmod": "+w"}
       ]
     },
     "finish": {
