@@ -1,6 +1,6 @@
 {
-    "title": "Ubuntu simple",
-    "backend": {
-      "imageid": "ubuntu"
-    }
+  "title": "まずはテスト",
+  "backend": {
+    "imageid": "ubuntu"
   }
+}
