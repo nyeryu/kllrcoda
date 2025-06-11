@@ -15,7 +15,10 @@
     ],
     "assets": {
       "host01": [
-        {"file": "pod.yaml", "target": "/root", "chmod": "+w"}
+        {"file": "pod.yaml", "target": "/root", "chmod": "+w"},
+        {"file": "replicaset.yaml", "target": "/root", "chmod": "+w"},
+        {"file": "deployment-v1.yaml", "target": "/root", "chmod": "+w"},
+        {"file": "deployment-v2.yaml", "target": "/root", "chmod": "+w"}
       ]
     },
     "finish": {
