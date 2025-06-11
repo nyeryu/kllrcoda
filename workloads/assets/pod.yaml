@@ -7,8 +7,19 @@ metadata:
 spec:
   containers:
   - name: hello
-    image: busybox
-    command: ["sh", "-c", "echo 'Hello, world!' | nc -l -p 8080 -q 1"]
+    image: python:3.12-alpine
+    command: ["python3", "-c"]
+    args:
+      - |
+        import socket
+        s = socket.socket()
+        s.bind(('', 8080))
+        s.listen(1)
+        conn, addr = s.accept()
+        req = conn.recv(1024)
+        conn.sendall(b"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: 13\r\n\r\nHello, world!")
+        conn.close()
+        s.close()
     ports:
     - containerPort: 8080
   restartPolicy: Never
